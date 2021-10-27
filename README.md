@@ -6,7 +6,7 @@ SimpleBatchConfiguration<br/>
 　　　　　　↓<br/>
 BatchConfigurerConfiguration
 <br/>- BasicBatchConfigurer
-<br/>- JpaBatchConfigurer</><br/>
+<br/>- JpaBatchConfigurer<br/>
 　　　　　　↓<br/>
 BatchAutoConfiguration
 
