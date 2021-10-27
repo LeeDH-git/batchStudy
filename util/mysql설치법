@@ -1,0 +1,22 @@
+docker 설치 후
+
+# MySQL 다운로드
+$ docker pull mysql
+
+# MySQL Docker 컨테이너 생성 및 실행
+$ docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=<password> -d -p 3306:3306 mysql:latest
+
+# MySQL Docker 컨테이너 중지
+$ docker stop mysql-container
+
+# MySQL Docker 컨테이너 시작
+$ docker start mysql-container
+
+# MySQL Docker 컨테이너 재시작
+$ docker restart mysql-container
+
+# MySQL Docker 컨테이너 접속
+$ docker exec -it mysql-container bash
+
+# MySQL 접속 후 ( $ mysql -u root -p )
+FLUSH PRIVILEGES;

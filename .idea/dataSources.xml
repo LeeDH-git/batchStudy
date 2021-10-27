@@ -7,7 +7,7 @@
       <imported>true</imported>
       <remarks>Hibernate</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/task_agile?useSSL=false</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/springbatch?useSSL=false&amp;allowPublicKeyRetrieval=true</jdbc-url>
     </data-source>
   </component>
 </project>
