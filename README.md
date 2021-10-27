@@ -1,7 +1,7 @@
 # batchStudy
 
 @EnableBatchProcessing<br/>
-↓<br/>
+<center>↓<br/></center>
 SimpleBatchConfiguration<br/>
 ↓<br/>
 BatchConfigurerConfiguration
