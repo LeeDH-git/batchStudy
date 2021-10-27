@@ -1,14 +1,16 @@
 # batchStudy
 
-<center>@EnableBatchProcessing</center>
-<center>↓</center>
-<center>SimpleBatchConfiguration</center>  
-<center>↓</center>
-<center>BatchConfigurerConfiguration
+# batchStudy
+
+@EnableBatchProcessing<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br/>
+SimpleBatchConfiguration<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br/>
+BatchConfigurerConfiguration
 <br/>- BasicBatchConfigurer
-<br/>- JpaBatchConfigurer</center>
-<center>↓</center>
-<center>BatchAutoConfiguration</center>
+<br/>- JpaBatchConfigurer<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br/>
+BatchAutoConfiguration
 
 #### @EnableBatchProcessing 
 : 스프링 배치가 작동하기 위해 선언해야 하는 어노테이션
