@@ -1,13 +1,13 @@
 # batchStudy
 
 @EnableBatchProcessing<br/>
-　↓<br/>
+　　　　　　↓<br/>
 SimpleBatchConfiguration<br/>
-↓<br/>
+　　　　　　↓<br/>
 BatchConfigurerConfiguration
 <br/>- BasicBatchConfigurer
 <br/>- JpaBatchConfigurer</><br/>
-↓<br/>
+　　　　　　↓<br/>
 BatchAutoConfiguration
 
 #### @EnableBatchProcessing 
