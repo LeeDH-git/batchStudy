@@ -57,6 +57,14 @@ BatchAutoConfiguration
 : 스프링 배치의 실행 및 관리를 위한 목적으로 여러 도메인들(Job, Step, JobParameters..)  의 정보들을 저장, 업데이트, 조회할 수 있는 스키마 제공<br/>
 DB 와 연동할 경우 필수적으로 메타 테이블이 생성 되어야 함
 
+#### - 기본 구현체
+- SimpleJob
+: 순차적으로 Step 을 실행시키는 Job <br/>
+  모든 Job에서 유용하게 사용할 수 있는 표준 기능을 갖고 있음
+- FlowJob
+: 특정한 조건과 흐름에 따라 Step 을 구성하여 실행시키는 Job <br/>
+  Flow 객체를 실행시켜서 작업을 진행함
+
 #### - Job  관련 테이블
 #### BATCH_JOB_INSTANCE
 - Job 이 실행될 때 JobInstance 정보가 저장되며 job_name과 job_key를 키로 하여 하나의 데이터가 저장
