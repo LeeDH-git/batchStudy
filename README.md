@@ -1,6 +1,6 @@
 # batchStudy
 
-# batchStudy
+----------------------------------------------------
 
 @EnableBatchProcessing<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br/>
@@ -34,7 +34,7 @@ BatchAutoConfiguration
 - JpaBatchConfigurer
   - Jpa 관련객체를 생성하는 설정 클래스
 - 사용자 정의 BatchConfigurer 인터페이스를 구현하여 사용할 수 있음
-
+----------------------------------------------------
 ### !스프링 배치 시작
 
 #### 1. @Configuration 선언
@@ -50,3 +50,32 @@ BatchAutoConfiguration
 #### 6. tasklet
 - Step 안에서 단일 태스크로 수행되는 로직 구현
 #### 7. Job 구동 > Step 실행 > Tasklet 실행
+
+----------------------------------------------------
+
+### !스프링 배치 메타 데이터
+: 스프링 배치의 실행 및 관리를 위한 목적으로 여러 도메인들(Job, Step, JobParameters..)  의 정보들을 저장, 업데이트, 조회할 수 있는 스키마 제공<br/>
+DB 와 연동할 경우 필수적으로 메타 테이블이 생성 되어야 함
+
+#### - Job  관련 테이블
+#### BATCH_JOB_INSTANCE
+- Job 이 실행될 때 JobInstance 정보가 저장되며 job_name과 job_key를 키로 하여 하나의 데이터가 저장
+동일한 job_name 과 job_key 로 중복 저장될 수 없다
+
+#### BATCH_JOB_EXECUTION
+- job 의 실행정보가 저장되며 Job 생성, 시작, 종료 시간,  실행상태, 메시지 등을 관리
+
+#### BATCH_JOB_EXECUTION_PARAMS
+- Job과 함께 실행되는 JobParameter 정보를 저장
+
+#### BATCH_JOB_EXECUTION_CONTEXT
+- Job 의 실행동안 여러가지 상태정보, 공유 데이터를 직렬화 (Json 형식) 해서 저장
+Step 간 서로 공유 가능함
+
+#### - Step  관련 테이블
+#### BATCH_STEP_EXECUTION
+- Step 의 실행정보가 저장되며 생성, 시작, 종료 시간,  실행상태, 메시지 등을 관리
+
+#### BATCH_STEP_EXECUTION_CONTEXT
+- Step 의 실행동안 여러가지 상태정보, 공유 데이터를 직렬화 (Json 형식) 해서 저장
+Step 별로 저장되며 Step 간 서로 공유할 수 없음
